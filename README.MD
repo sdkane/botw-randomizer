@@ -1,1 +1,3 @@
 Generate a randomized location order for Legend of Zelda Breath of the Wild.
+
+![mainwindow](screenshot/mainwindow.JPG)
