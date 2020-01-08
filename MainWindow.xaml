@@ -1,0 +1,39 @@
+﻿<Window x:Class="BOTWSplitsRandomizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BOTWSplitsRandomizer"
+        mc:Ignorable="d"
+        Title="BOTW Splits Randomizer" Height="352" Width="435.089">
+    <Grid>
+        <Label Content="Add Locations" HorizontalAlignment="Left" Height="30" Margin="15,62,0,0" VerticalAlignment="Top" Width="140"/>
+        <CheckBox x:Name="cRuneShrines" Content="Rune Shrines" HorizontalAlignment="Left" Height="20" Margin="25,37,0,0" VerticalAlignment="Top" Width="95" IsChecked="False"/>
+        <CheckBox x:Name="cShrines" Content="Shrines" HorizontalAlignment="Left" Height="20" Margin="25,92,0,0" VerticalAlignment="Top" Width="95" IsChecked="True"/>
+        <CheckBox x:Name="cTowers" Content="Towers" HorizontalAlignment="Left" Height="20" Margin="25,117,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cBeasts" Content="Divine Beasts" HorizontalAlignment="Left" Height="20" Margin="25,142,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cStables" Content="Stables" HorizontalAlignment="Left" Height="20" Margin="25,167,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cFairies" Content="Great Fairies" HorizontalAlignment="Left" Height="20" Margin="25,192,0,0" VerticalAlignment="Top" Width="95"/>
+
+        <Label Content="Add Movement" HorizontalAlignment="Left" Height="30" Margin="145,62,0,0" VerticalAlignment="Top" Width="140"/>
+        <CheckBox x:Name="cBtb" Content="BTB" HorizontalAlignment="Left" Height="20" Margin="155,92,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
+        <CheckBox x:Name="cWindbomb" Content="Windbomb" HorizontalAlignment="Left" Height="20" Margin="155,117,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
+        <CheckBox x:Name="cStasisLaunch" Content="Stasis Launch" HorizontalAlignment="Left" Height="20" Margin="155,142,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
+        <CheckBox x:Name="cHorseback" Content="Horseback" HorizontalAlignment="Left" Height="20" Margin="155,167,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
+        <CheckBox x:Name="cShieldSurf" Content="Shield Surf" HorizontalAlignment="Left" Height="20" Margin="155,192,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
+        <CheckBox x:Name="cMoonJump" Content="Moon Jump" HorizontalAlignment="Left" Height="20" Margin="155,242,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="cWalk" Content="Walk" HorizontalAlignment="Left" Height="20" Margin="155,217,0,0" VerticalAlignment="Top" Width="115"/>
+
+        <Button Content="Create Splits" HorizontalAlignment="Left" Margin="110,280,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="CreateSplits"/>
+        <Label Content="Randomize Rune Shrine Order? (always first 4)" HorizontalAlignment="Left" Height="30" Margin="15,10,0,0" VerticalAlignment="Top" Width="255"/>
+        
+        <ComboBox x:Name="cBtbProbability" HorizontalAlignment="Left" Height="20" Margin="275,92,0,0" VerticalAlignment="Top" Width="119"/>
+        <ComboBox x:Name="cWindbombProbability" HorizontalAlignment="Left" Height="20" Margin="275,117,0,0" VerticalAlignment="Top" Width="119"/>
+        <ComboBox x:Name="cStasisLaunchProbability" HorizontalAlignment="Left" Height="20" Margin="275,142,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cHorsebackProbability" HorizontalAlignment="Left" Height="20" Margin="275,167,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cShieldSurfProbability" HorizontalAlignment="Left" Height="20" Margin="275,192,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cWalkProbability" HorizontalAlignment="Left" Height="20" Margin="275,217,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cMoonJumpProbability" HorizontalAlignment="Left" Height="20" Margin="275,242,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <Label Content="Relative Probability" HorizontalAlignment="Left" Height="30" Margin="265,62,0,0" VerticalAlignment="Top" Width="140"/>
+    </Grid>
+</Window>
