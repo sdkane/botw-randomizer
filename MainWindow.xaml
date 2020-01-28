@@ -5,35 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BOTWSplitsRandomizer"
         mc:Ignorable="d"
-        Title="BOTW Splits Randomizer" Height="352" Width="435.089">
+        Title="BOTW Randomizer" Height="420.098" Width="616.975">
     <Grid>
-        <Label Content="Add Locations" HorizontalAlignment="Left" Height="30" Margin="15,62,0,0" VerticalAlignment="Top" Width="140"/>
-        <CheckBox x:Name="cRuneShrines" Content="Rune Shrines" HorizontalAlignment="Left" Height="20" Margin="25,37,0,0" VerticalAlignment="Top" Width="95" IsChecked="False"/>
-        <CheckBox x:Name="cShrines" Content="Shrines" HorizontalAlignment="Left" Height="20" Margin="25,92,0,0" VerticalAlignment="Top" Width="95" IsChecked="True"/>
-        <CheckBox x:Name="cTowers" Content="Towers" HorizontalAlignment="Left" Height="20" Margin="25,117,0,0" VerticalAlignment="Top" Width="95"/>
-        <CheckBox x:Name="cBeasts" Content="Divine Beasts" HorizontalAlignment="Left" Height="20" Margin="25,142,0,0" VerticalAlignment="Top" Width="95"/>
-        <CheckBox x:Name="cStables" Content="Stables" HorizontalAlignment="Left" Height="20" Margin="25,167,0,0" VerticalAlignment="Top" Width="95"/>
-        <CheckBox x:Name="cFairies" Content="Great Fairies" HorizontalAlignment="Left" Height="20" Margin="25,192,0,0" VerticalAlignment="Top" Width="95"/>
+        <Label Content="Add Extra Locations" HorizontalAlignment="Left" Height="30" Margin="15,165,0,0" VerticalAlignment="Top" Width="140"/>
+        <CheckBox x:Name="cRuneShrines" Content="Rune Shrines" HorizontalAlignment="Left" Height="20" Margin="25,49,0,0" VerticalAlignment="Top" Width="95" IsChecked="False"/>
+        <CheckBox x:Name="cShrines" Content="Shrines" HorizontalAlignment="Left" Height="20" Margin="25,74,0,0" VerticalAlignment="Top" Width="95" IsChecked="True"/>
+        <CheckBox x:Name="cTowers" Content="Towers" HorizontalAlignment="Left" Height="20" Margin="25,195,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cBeasts" Content="Divine Beasts" HorizontalAlignment="Left" Height="20" Margin="25,220,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cStables" Content="Stables" HorizontalAlignment="Left" Height="20" Margin="25,245,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="cFairies" Content="Great Fairies" HorizontalAlignment="Left" Height="20" Margin="25,270,0,0" VerticalAlignment="Top" Width="95"/>
 
-        <Label Content="Add Movement" HorizontalAlignment="Left" Height="30" Margin="145,62,0,0" VerticalAlignment="Top" Width="140"/>
-        <CheckBox x:Name="cBtb" Content="BTB" HorizontalAlignment="Left" Height="20" Margin="155,92,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
-        <CheckBox x:Name="cWindbomb" Content="Windbomb" HorizontalAlignment="Left" Height="20" Margin="155,117,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
-        <CheckBox x:Name="cStasisLaunch" Content="Stasis Launch" HorizontalAlignment="Left" Height="20" Margin="155,142,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
-        <CheckBox x:Name="cHorseback" Content="Horseback" HorizontalAlignment="Left" Height="20" Margin="155,167,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
-        <CheckBox x:Name="cShieldSurf" Content="Shield Surf" HorizontalAlignment="Left" Height="20" Margin="155,192,0,0" VerticalAlignment="Top" Width="115" IsChecked="True"/>
-        <CheckBox x:Name="cMoonJump" Content="Moon Jump" HorizontalAlignment="Left" Height="20" Margin="155,242,0,0" VerticalAlignment="Top" Width="115"/>
-        <CheckBox x:Name="cWalk" Content="Walk" HorizontalAlignment="Left" Height="20" Margin="155,217,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label Content="Add Movement" HorizontalAlignment="Left" Height="30" Margin="216,165,0,0" VerticalAlignment="Top" Width="140"/>
+        <CheckBox x:Name="cBtb" Content="BTB" HorizontalAlignment="Left" Height="20" Margin="226,195,0,0" VerticalAlignment="Top" Width="115" IsChecked="False"/>
+        <CheckBox x:Name="cWindbomb" Content="Windbomb" HorizontalAlignment="Left" Height="20" Margin="226,220,0,0" VerticalAlignment="Top" Width="115" IsChecked="False"/>
+        <CheckBox x:Name="cStasisLaunch" Content="Stasis Launch" HorizontalAlignment="Left" Height="20" Margin="226,245,0,0" VerticalAlignment="Top" Width="115" IsChecked="False"/>
+        <CheckBox x:Name="cHorseback" Content="Horseback" HorizontalAlignment="Left" Height="20" Margin="226,270,0,0" VerticalAlignment="Top" Width="115" IsChecked="False"/>
+        <CheckBox x:Name="cShieldSurf" Content="Shield Surf" HorizontalAlignment="Left" Height="20" Margin="226,295,0,0" VerticalAlignment="Top" Width="115" IsChecked="False"/>
+        <CheckBox x:Name="cMoonJump" Content="Moon Jump" HorizontalAlignment="Left" Height="20" Margin="226,345,0,0" VerticalAlignment="Top" Width="115"/>
+        <CheckBox x:Name="cWalk" Content="Walk" HorizontalAlignment="Left" Height="20" Margin="226,320,0,0" VerticalAlignment="Top" Width="115"/>
 
-        <Button Content="Create Splits" HorizontalAlignment="Left" Margin="110,280,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="CreateSplits"/>
-        <Label Content="Randomize Rune Shrine Order? (always first 4)" HorizontalAlignment="Left" Height="30" Margin="15,10,0,0" VerticalAlignment="Top" Width="255"/>
-        
-        <ComboBox x:Name="cBtbProbability" HorizontalAlignment="Left" Height="20" Margin="275,92,0,0" VerticalAlignment="Top" Width="119"/>
-        <ComboBox x:Name="cWindbombProbability" HorizontalAlignment="Left" Height="20" Margin="275,117,0,0" VerticalAlignment="Top" Width="119"/>
-        <ComboBox x:Name="cStasisLaunchProbability" HorizontalAlignment="Left" Height="20" Margin="275,142,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
-        <ComboBox x:Name="cHorsebackProbability" HorizontalAlignment="Left" Height="20" Margin="275,167,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
-        <ComboBox x:Name="cShieldSurfProbability" HorizontalAlignment="Left" Height="20" Margin="275,192,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
-        <ComboBox x:Name="cWalkProbability" HorizontalAlignment="Left" Height="20" Margin="275,217,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
-        <ComboBox x:Name="cMoonJumpProbability" HorizontalAlignment="Left" Height="20" Margin="275,242,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
-        <Label Content="Relative Probability" HorizontalAlignment="Left" Height="30" Margin="265,62,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Content="Create Splits" HorizontalAlignment="Left" Margin="508,340,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="CreateSplits"/>
+
+        <ComboBox x:Name="cBtbProbability" HorizontalAlignment="Left" Height="20" Margin="326,195,0,0" VerticalAlignment="Top" Width="119"/>
+        <ComboBox x:Name="cWindbombProbability" HorizontalAlignment="Left" Height="20" Margin="326,220,0,0" VerticalAlignment="Top" Width="119"/>
+        <ComboBox x:Name="cStasisLaunchProbability" HorizontalAlignment="Left" Height="20" Margin="326,245,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cHorsebackProbability" HorizontalAlignment="Left" Height="20" Margin="326,270,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cShieldSurfProbability" HorizontalAlignment="Left" Height="20" Margin="326,295,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cWalkProbability" HorizontalAlignment="Left" Height="20" Margin="326,320,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+        <ComboBox x:Name="cMoonJumpProbability" HorizontalAlignment="Left" Height="20" Margin="326,345,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.482,1.523"/>
+
+        <Label Content="Define Shrine Randomizations" HorizontalAlignment="Left" Height="30" Margin="15,10,0,0" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Relative Probability" HorizontalAlignment="Left" Height="30" Margin="316,165,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label Content= "Always first 4, default order: Owa Daim, Keh Namut, Oman Au, Ja Baij" HorizontalAlignment="Left" Height="30" Margin="149,43,0,0" VerticalAlignment="Top" Width="378"/>
+        <Label Content= "40 shrines, excludes: Voo Lota, Raqa Zunzo, Mijah Rokee" HorizontalAlignment="Left" Height="30" Margin="149,130,0,0" VerticalAlignment="Top" Width="307"/>
+        <Label Content="Special Runs" HorizontalAlignment="Left" Height="30" Margin="15,101,0,0" VerticalAlignment="Top" Width="175"/>
+        <CheckBox x:Name="cMasterSwordMode" Content="Master Sword Run" HorizontalAlignment="Left" Height="20" Margin="25,136,0,0" VerticalAlignment="Top" Width="119" IsChecked="False"/>
     </Grid>
 </Window>

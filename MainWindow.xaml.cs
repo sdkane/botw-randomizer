@@ -55,7 +55,12 @@ namespace BOTWSplitsRandomizer {
             if (cWalk.IsChecked == true) { AddMovementWithProbability(ref movementTypes, "Walk", cWalkProbability.SelectedIndex); };
             if (cMoonJump.IsChecked == true) { AddMovementWithProbability(ref movementTypes, "Moon Jump", cMoonJumpProbability.SelectedIndex); };
 
-            if (cShrines.IsChecked == true) { locations.AddRange(Shrines); };
+            if (cShrines.IsChecked == true) { 
+                locations.AddRange(Shrines); 
+                if (cMasterSwordMode.IsChecked == false) {
+                    locations.AddRange(LockedShrines);
+                }
+            };
             if (cTowers.IsChecked == true) { locations.AddRange(Towers); };
             if (cBeasts.IsChecked == true) { locations.AddRange(Beasts); };
             if (cStables.IsChecked == true) { locations.AddRange(Stables); };
@@ -79,11 +84,16 @@ namespace BOTWSplitsRandomizer {
                 }
             }
 
-            while (locations.Count > 0 && safetyEscape < 1000) {
+            bool masterSwordExit = false;
+
+            while (locations.Count > 0 && safetyEscape < 1000 && masterSwordExit == false) {
                 locIndex = rnd.Next(0, locations.Count);
                 movIndex = rnd.Next(0, movementTypes.Count);
-                if (Shrines.Contains(locations[locIndex]) || RuneShrines.Contains(locations[locIndex])) {
+                if (Shrines.Contains(locations[locIndex]) || RuneShrines.Contains(locations[locIndex]) || LockedShrines.Contains(locations[locIndex])) {
                     innerText = " [" + shrineCounter + "] ";
+                    if (cMasterSwordMode.IsChecked == true && shrineCounter >= 40) {
+                        masterSwordExit = true;
+                    }
                     shrineCounter += 1;
                 }
                 else {
@@ -96,7 +106,12 @@ namespace BOTWSplitsRandomizer {
                 safetyEscape += 1;
             }
 
-            finalList.AddRange(Ganon);
+            if (cMasterSwordMode.IsChecked == false) {
+                finalList.AddRange(Ganon);
+            }
+            else {
+                finalList.Add("Master Sword");
+            }
 
             using (TextWriter tw = new StreamWriter(fileProps.Path + "\\" + fileProps.Name)) {
                 foreach (String s in finalList)
@@ -213,6 +228,12 @@ namespace BOTWSplitsRandomizer {
             "Ja Baij",
         };
 
+        public static List<string> LockedShrines = new List<string> {
+            "Voo Lota",
+            "Raqa Zunzo",
+            "Mijah Rokee",            
+        };
+
         public static List<string> Shrines = new List<string> {
             "Bosh Kala",
             "Toto Sah",
@@ -268,16 +289,14 @@ namespace BOTWSplitsRandomizer {
             "Yah Rin",
             "Kah Yah",
             "Muwo Jeem",
-            "Korgu Chideh",
-            "Mijah Rokee",
+            "Korgu Chideh",            
             "Shae Loya",
             "Sheem Dagoze",
             "Mogg Latan",
             "Zalta Wa",
             "Maag No'rah",
             "Toh Yahsa",
-            "Sha Warvo",
-            "Voo Lota",
+            "Sha Warvo",            
             "Akh Va'quot",
             "Bareeda Naag",
             "Tena Ko'sah",
@@ -297,8 +316,7 @@ namespace BOTWSplitsRandomizer {
             "Rin Oyaa",
             "Hawa Koth",
             "Kema Zoos",
-            "Tho Kayu",
-            "Raqa Zunzo",
+            "Tho Kayu",            
             "Misae Suma",
             "Dila Maag",
             "Korsh O'hu",
