@@ -1,6 +1,6 @@
 Generate a randomized location order for Legend of Zelda Breath of the Wild.<br>
-Download the release here if you don't want to build the code yourself<br>
-https://github.com/sdkane/botw-randomizer/releases/tag/v1.0.0
+Download the latest release here if you don't want to build the code yourself<br>
+https://github.com/sdkane/botw-randomizer/releases
 
 ![mainwindow](https://raw.githubusercontent.com/sdkane/botw-randomizer/master/screenshot/mainwindow.JPG)
 
